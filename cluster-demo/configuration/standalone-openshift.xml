@@ -132,9 +132,6 @@
                     <driver name="postgresql" module="org.postgresql">
                         <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
                     </driver>
-                    <driver name="postgresql94" module="org.postgresql94">
-                        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
-                    </driver>
                 </drivers>
             </datasources>
         </subsystem>
@@ -261,7 +258,6 @@
             <stack name="udp">
                 <transport type="UDP" socket-binding="jgroups-udp"/>
                 <protocol type="openshift.DNS_PING"/>
-<protocol type="openshift.KUBE_PING"/>
                 <protocol type="MERGE3"/>
                 <protocol type="FD_SOCK" socket-binding="jgroups-udp-fd"/>
                 <protocol type="FD"/>
@@ -278,7 +274,6 @@
             <stack name="tcp">
                 <transport type="TCP" socket-binding="jgroups-tcp"/>
                 <protocol type="openshift.DNS_PING"/>
-<protocol type="openshift.KUBE_PING"/>
                 <protocol type="MERGE2"/>
                 <protocol type="FD_SOCK" socket-binding="jgroups-tcp-fd"/>
                 <protocol type="FD"/>
